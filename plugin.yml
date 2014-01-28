@@ -1,0 +1,16 @@
+author: Ar7ific1al
+description: Get cold, stay warm, and make shelter to survive
+main: com.github.ar7ific1al.outinthecold.Main
+name: OutInTheCold
+url: 
+version: 0.1a
+#depend: [EnchantmentAPI]
+commands:
+    outinthecold:
+        description: Base command for OutInTheCold
+        usage: /<command>
+        aliases: [oitc, inthecold]
+permissions:
+    oitc.permission:
+        description: Placeholder permissions
+        default: op
