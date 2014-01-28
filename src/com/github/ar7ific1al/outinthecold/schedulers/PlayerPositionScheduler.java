@@ -1,3 +1,17 @@
+/**
+ * 
+ * Basic function of this class is as follows:
+ * Create an instance of this class when a player logs in, using the constructor
+ * Pass in the Player who logged in with the constructor
+ * Initialize X, Y and Z with the player's current X, Y and Z positions
+ * Start the runnable with "delay" delay
+ * Every "interval" milliseconds, test the online player list for the player associated with this runnable
+ * If the player is online, continue; else, cancel this runnable
+ * If player is online, test prevx/prevy/prevz against player's current X/Y/Z
+ * If the absolute difference is greater than "offset", take necessary actions depending upon player's conditions
+ * 
+ */
+
 package com.github.ar7ific1al.outinthecold.schedulers;
 
 import org.bukkit.Bukkit;
@@ -20,6 +34,7 @@ public class PlayerPositionScheduler implements Runnable{
 	private double prevy;
 	private double z;
 	private double prevz;
+	private double offset = 3;
 	
 	public PlayerPositionScheduler(Player player, Main plugin, int id, long delay, long interval){
 		this.plugin = plugin;
